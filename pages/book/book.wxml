@@ -1,0 +1,22 @@
+<import src="/towxml/entry.wxml"/>
+
+<view class='container'>
+  <view class='content'  bindtap='close'>
+    <template is="entry" data="{{...essay}}"/>    
+  </view>
+
+  <scroll-view scroll-y class='menu' wx:if="{{isShow}}">
+    <view wx:for="{{catalog}}" wx:key="{{index}}" bindtap='handmenu' data-id='{{item._id}}'>
+     {{item.title}}
+    </view>
+  </scroll-view>
+
+  <view class='btn'>
+    <view><image class='img' src='/static/iconfont/add.png'></image></view>
+    <view bindtap='bindbtn'><image class='img'></image></view>
+    <view><image class='img'></image></view>
+    <view><image class='img'></image></view>
+    <view><image class='img'></image></view>
+  </view>
+</view>
+

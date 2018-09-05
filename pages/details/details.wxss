@@ -1,0 +1,93 @@
+.content{
+  width:710rpx;
+  margin: 0 auto;
+  padding-bottom: 40rpx;
+  border-bottom: 8rpx solid #f1f1f1;  
+}
+.content .book{
+  display: flex;
+  justify-content: space-between;
+}
+.content .book .img{
+  height:300rpx;
+  width:280rpx;
+}
+.book .book-content{
+  margin-left: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-direction:column;  
+}
+.book .book-content .book-title{
+  font-size: 30rpx;
+  font-weight: bold
+}
+.book-content{
+  font-size: 30rpx;
+  color: #666;
+}
+.book-btn{
+  display: flex;
+  justify-content: space-between;
+
+}
+.book-btn .btn{
+  font-size: 30rpx;
+  width:280rpx;
+  height: 60rpx;
+  background-color: #f1f1f1;
+  margin-top: 60rpx;
+  vertical-align: middle;
+  
+}
+.middle{
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx;
+  position: relative;
+  padding-bottom: 10rpx;
+  border-bottom: 8rpx solid #f1f1f1; 
+}
+.middle .middle-title{
+  font-size: 38rpx;
+  font-weight: bold;
+  margin: 10rpx 0
+}
+.middle .middle-introduce{
+  font-size: 30rpx;
+  color: #666;
+  margin: 30rpx 0
+}
+.middle .middle-check{
+  margin: 20rpx 0;
+  border-bottom: 4rpx solid #f1f1f1;   
+}
+.check-title{
+  float: left;
+  font-size: 35rpx;
+  font-weight: boldl
+}
+.check-nums{
+  float: left;
+  font-size: 30rpx;
+  color: #666;
+  margin-left: 20rpx
+}
+.check-time{
+  float: right;
+  font-size: 30rpx;
+  color: #666;
+  margin-right: 20rpx
+}
+.btn-read{
+  position: fixed;
+  bottom: 30rpx;
+  left: 0;
+  right: 0;
+  color: #fff;
+  background: #409eff;
+  height:60rpx;
+  width: 710rpx;
+  font-size: 30rpx;
+  vertical-align: middle;  
+}

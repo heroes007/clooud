@@ -1,0 +1,7 @@
+<view class='container'>
+  <view wx:for="{{cataData}}" wx:key="{{index}}" class='catalog'>
+    <navigator url="{{'/pages/book/book?id=' + item._id + '&bookId=' + bookInof}}" class='link'>
+      {{item.title}}  
+    </navigator>
+  </view>
+</view>

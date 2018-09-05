@@ -1,0 +1,27 @@
+<view>
+  <view class='content'>
+    <view class='book'>
+      <image src='{{bookData.data.img}}' class='img'></image>
+      <view class='book-content'>
+        <text class='book-title'>{{bookData.data.title}}</text>
+        <text class='book-author'>作者：{{bookData.data.author}}</text>
+        <text class='book-looknums'>{{bookData.data.looknums}}人在看</text>
+        <text class='book-likenums'>{{bookData.data.startsnums}}人喜欢</text>
+      </view>
+    </view>
+    <view class='book-btn'>
+      <button class='btn'>已收藏</button>
+      <button class='btn'>分享好友</button>
+    </view>
+  </view>
+  <view class='middle'>
+    <text class='middle-title'>简介</text>
+    <text class='middle-introduce'>{{bookData.data.desc}}</text>
+    <view class='middle-check'>
+      <text class='check-title'>查看目录</text>
+      <text class='check-nums'>共{{bookData.length}}章</text>
+      <text class='check-time'>更新于2天前></text>
+    </view>
+  </view>
+  <button class='btn-read' bindtap='jumpCatalog'>阅读该书记</button>
+</view>
