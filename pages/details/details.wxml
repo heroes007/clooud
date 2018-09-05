@@ -1,4 +1,5 @@
 <view>
+  <image class='loading' src='/static/svg/loading.svg' wx:if="{{isLoading}}"></image>
   <view class='content'>
     <view class='book'>
       <image src='{{bookData.data.img}}' class='img'></image>

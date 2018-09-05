@@ -3,17 +3,20 @@ Page({
   data: {
     bookInof: "",
     cataData: [],    
+    isLoading:false,
   },
   onLoad: function (options) {
     this.setData({
       bookInof: options.id,
+      isLoading:true
     })
     this.getData()
   },
   getData() {
     fetch.get(`/titles/${this.data.bookInof}`).then(res => {
       this.setData({
-        cataData: res.data
+        cataData: res.data,
+        isLoading: false,        
       })
     })
   },

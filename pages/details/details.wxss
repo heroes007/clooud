@@ -9,8 +9,8 @@
   justify-content: space-between;
 }
 .content .book .img{
-  height:300rpx;
-  width:280rpx;
+  height:330rpx;
+  width:260rpx;
 }
 .book .book-content{
   margin-left: 20rpx;
@@ -29,6 +29,7 @@
 .book-btn{
   display: flex;
   justify-content: space-between;
+  z-index: 996
 
 }
 .book-btn .btn{

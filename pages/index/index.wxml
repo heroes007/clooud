@@ -1,4 +1,5 @@
 <view class='container'>
+  <image class='loading' src='/static/svg/loading.svg' wx:if="{{isLoading}}"></image>
   <swiper indicator-dots="{{indicatorDots}}"
     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{swiperData}}" wx:key="{{index}}">
@@ -10,11 +11,11 @@
   <view class='main-content'>
     <view class='content-item' wx:for="{{mainContent}}" wx:key="{{index}}" >
       <view class='title'>{{item.title}}</view>
-        <view class='content' wx:for="{{item.books}}" wx:key="{{index}}">
+        <view class='content' wx:for="{{item.books}}" wx:key="{{index}}" >
           <view class='box-l'>
-            <image src='{{item.img}}' class='img'></image>
+            <image src='{{item.img}}' class='img' bindtap="jumpBook" data-id="{{item._id}}"></image>
           </view>
-          <view class='box-r'>
+          <view class='box-r' bindtap="jumpBook" data-id="{{item._id}}">
             <view class='book-title'>{{item.title}}</view>
             <view class='book-desc'>{{item.desc}}</view>
               <view class='author'>

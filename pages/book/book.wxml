@@ -1,8 +1,12 @@
 <import src="/towxml/entry.wxml"/>
 
 <view class='container'>
-  <view class='content'  bindtap='close'>
-    <template is="entry" data="{{...essay}}"/>    
+  <image class='loading' src='/static/svg/loading.svg' wx:if="{{isLoading}}"></image>
+
+  <view class='mask' wx:if="{{isShow}}" bindtap='close'></view>
+  
+  <view class='content' style="{{'font-size:'+font+'rpx'}}">
+    <wemark md="{{essay}}"  highlight type="rich-text"></wemark>
   </view>
 
   <scroll-view scroll-y class='menu' wx:if="{{isShow}}">
@@ -11,12 +15,12 @@
     </view>
   </scroll-view>
 
-  <view class='btn'>
-    <view><image class='img' src='/static/iconfont/add.png'></image></view>
-    <view bindtap='bindbtn'><image class='img'></image></view>
-    <view><image class='img'></image></view>
-    <view><image class='img'></image></view>
-    <view><image class='img'></image></view>
+  <view class='btn container'>
+    <view bindtap='handlelast'><image class='img' src='/static/iconfont/left.png'></image></view>
+    <view bindtap='btnmenu'><image class='img'  src='/static/iconfont/menu.png'></image></view>
+    <view bindtap='handleadd'><image class='img'  src='/static/iconfont/add.png'></image></view>
+    <view bindtap='handledecrease'><image class='img'  src='/static/iconfont/decrease.png'></image></view>
+    <view bindtap='handlenext'><image class='img'  src='/static/iconfont/right.png'></image></view>
   </view>
 </view>
 

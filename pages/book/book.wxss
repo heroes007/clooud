@@ -13,7 +13,7 @@
   background-color: #fff;
   font-size: 35rpx;
   line-height: 2;
-  margin: 10rpx
+  padding: 10rpx;
 }
 .btn{
   position: fixed;
@@ -26,13 +26,20 @@
 }
 .btn{
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
+  z-index: 998
 }
 .img{
-  width: 100rpx;
-  height: 100rpx;
+  width: 50rpx;
+  height: 50rpx;
+  padding: 15rpx
 }
-
-@import '/towxml/style/main.wxss';
-@import '/towxml/style/theme/light.wxss';
-@import '/towxml/style/theme/dark.wxss';
+.mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 888;
+  background: rgba(0, 0, 0, .2);
+}
