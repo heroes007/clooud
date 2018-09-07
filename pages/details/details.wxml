@@ -11,8 +11,8 @@
       </view>
     </view>
     <view class='book-btn'>
-      <button class='btn'>已收藏</button>
-      <button class='btn'>分享好友</button>
+      <button class='btn' bindtap='collect' s>{{bookData.isCollect == 0?'收藏':'已收藏'}}</button>
+      <button class='btn' open-type="share">分享好友</button>
     </view>
   </view>
   <view class='middle'>

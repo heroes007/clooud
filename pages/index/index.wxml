@@ -10,26 +10,36 @@
   </swiper>
   <view class='main-content'>
     <view class='content-item' wx:for="{{mainContent}}" wx:key="{{index}}" >
-      <view class='title'>{{item.title}}</view>
-        <view class='content' wx:for="{{item.books}}" wx:key="{{index}}" >
-          <view class='box-l'>
-            <image src='{{item.img}}' class='img' bindtap="jumpBook" data-id="{{item._id}}"></image>
-          </view>
-          <view class='box-r' bindtap="jumpBook" data-id="{{item._id}}">
-            <view class='book-title'>{{item.title}}</view>
-            <view class='book-desc'>{{item.desc}}</view>
-              <view class='author'>
-                <text class='author-l'>{{item.author}}</text>
-                <view class='author-r'>
-                  <text class='updata-time'>两天前</text>
-                  <text class='category'>分类</text>
-                  <text class='many'>{{item.looknums}}人看</text>
-                </view>
-              </view>
-              <view></view>
+      <view class='title'>
+        <view class='title-name'>{{item.title}}</view>
+        <view class='title-more' bindtap='getMore' data-id='{{item._id}}'>更多...</view>
+      </view>
+      <view class='content' wx:for="{{item.books}}" wx:key="{{index}}" >
+        <view class='box-l'>
+          <image src='{{item.img}}' class='img' bindtap="jumpBook" data-id="{{item._id}}"></image>
+        </view>
+        <view class='box-r' bindtap="jumpBook" data-id="{{item._id}}">
+          <view class='book-title'>{{item.title}}</view>
+          <view class='book-desc'>{{item.desc}}</view>
+          <view class='author'>
+            <text class='author-l'>{{item.author}}</text>
+            <view class='author-r'>
+              <text class='updata-time'>两天前</text>
+              <text class='category'>分类</text>
+              <text class='many'>{{item.looknums}}人看</text>
+            </view>
           </view>
         </view>
       </view>
-    </view>    
+    </view>
+  </view>
+  <view wx:if="{{loadingDown}}">
+    <view class='load-last'  wx:if='{{isMore}}'>
+      <image src='/static/svg/load.svg'class='load-end'></image>
+      <text class='load-text'>正在拼命加载中</text>
+    </view>
+  </view>
+  <view class='bottom' wx:if='{{!isMore}}'>已加载全部</view>  
 </view>
+ 
 

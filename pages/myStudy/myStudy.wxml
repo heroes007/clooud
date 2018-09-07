@@ -1,0 +1,22 @@
+<view class='container' wx:for="{{catalog}}" wx:key="{{index}}">
+  <image class='loading' src='/static/svg/loading.svg' wx:if="{{isLoading}}"></image>
+ <view class='content'>
+  <image class='img' src='{{item.book.img}}'></image>
+  <view class='book'>
+    <view class='book-title'>{{item.book.title}}</view>
+    <view class='book-plan'>书籍{{item.title.index}}/{{item.title.total}}章节</view>
+    <view class='book-schedule'>
+      <progress class='book-bar' percent="50" color='styblue'></progress>
+      <view class='book-percent'>已看{{item.result}}%</view>    
+    </view>
+    <view class='book-record'>
+      <view class='book-last'>上次查看：{{item.title.title}}</view>
+      <view class='book-time'>11小时前</view>
+    </view>
+    <view class='btn'>
+      <button class='btn-click' bindtap='continue' data-id='{{item.title._id}}' data-bookId='{{item.book._id}}'>继续阅读</button>
+      <button class='btn-click' bindtap='check' data-id='{{item.book._id}}'>查看文档</button>
+    </view>
+  </view>
+ </view>
+</view>

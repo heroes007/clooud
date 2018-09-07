@@ -1,0 +1,17 @@
+.content{
+  float: left
+}
+.book{
+  width: 320rpx;
+  height: 500rpx;
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx 20rpx
+}
+.img{
+  width: 300rpx;
+  height: 350rpx;
+}
+.title{
+  font-size: 25rpx
+}

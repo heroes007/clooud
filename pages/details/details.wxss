@@ -38,8 +38,7 @@
   height: 60rpx;
   background-color: #f1f1f1;
   margin-top: 60rpx;
-  vertical-align: middle;
-  
+  vertical-align: middle; 
 }
 .middle{
   display: flex;
@@ -81,7 +80,7 @@
   margin-right: 20rpx
 }
 .btn-read{
-  position: fixed;
+  position: relative;
   bottom: 30rpx;
   left: 0;
   right: 0;
@@ -90,5 +89,4 @@
   height:60rpx;
   width: 710rpx;
   font-size: 30rpx;
-  vertical-align: middle;  
 }

@@ -28,6 +28,7 @@ Page({
         index : res.data.article.index,
         isLoading:false,
       })
+      wx.setStorageSync()
     })
   },
   getImp(){

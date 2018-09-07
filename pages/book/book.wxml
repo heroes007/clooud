@@ -9,7 +9,7 @@
     <wemark md="{{essay}}"  highlight type="rich-text"></wemark>
   </view>
 
-  <scroll-view scroll-y class='menu' wx:if="{{isShow}}">
+  <scroll-view scroll-y class='menu {{isShow?"show":""}}'>
     <view wx:for="{{catalog}}" wx:key="{{index}}" bindtap='handmenu' data-id='{{item._id}}'>
      {{item.title}}
     </view>

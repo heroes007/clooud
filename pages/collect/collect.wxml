@@ -1,0 +1,9 @@
+<view class='container'>
+  <image class='loading' src='/static/svg/loading.svg' wx:if="{{isLoading}}"></image>
+  <view class='content' wx:for="{{collectBook}}" wx:key="{{index}}">
+    <view class='book' bindtap='onRead' data-id='{{item.book._id}}'>
+      <image class='img' src='{{item.book.img}}'></image>
+      <text class='title'>{{item.book.title}}</text>
+    </view>
+  </view>
+</view>

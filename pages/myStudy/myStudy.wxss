@@ -1,0 +1,60 @@
+.content{
+  display: flex;
+  justify-content: space-between;
+  height: 300rpx;
+  width:710rpx;
+  margin:20rpx 0
+}
+.img{
+  width:200rpx;
+  height:280rpx;
+}
+.book{
+  display: flex;
+  flex-direction: column;
+  width: 480rpx
+}
+.book-title{
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.book-plan{
+  font-size: 28rpx;
+  color: #666
+}
+.book-schedule{
+  display: flex;
+  justify-content: space-between;
+  height: 30rpx
+}
+.book-bar{
+  width:300rpx
+}
+.book-percent{
+  font-size: 25rpx;
+  color: #666
+}
+.book-record{
+    display: flex;
+  justify-content: space-between
+}
+.book-last{
+  font-size: 22rpx;
+  color: #666
+}
+.book-time{
+  font-size: 22rpx;
+  color: #666
+}
+.btn{
+  display: flex;
+  justify-content: space-between;
+}
+.btn-click{
+  font-size: 30rpx;
+  width:180rpx;
+  height: 60rpx;
+  background-color: #f1f1f1;
+  margin-top: 60rpx;
+  vertical-align: middle; 
+}

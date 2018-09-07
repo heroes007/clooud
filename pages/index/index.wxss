@@ -3,10 +3,20 @@
   height:350rpx;
 }
 .content-item .title{
+  display: flex;
+  justify-content: space-between;
+  padding:30rpx 20rpx 10rpx 20rpx;  
+}
+.content-item .title .title-name{
   font-size: 35rpx;
   font-weight: bold;
-  padding:30rpx 20rpx 10rpx 20rpx;
-  margin-left: 2px solid #000
+  padding-left: 15rpx;  
+  border-left: 1rpx solid #000   
+} 
+.content-item .title .title-more{
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #666
 } 
 .content{
   display: flex;
@@ -19,6 +29,9 @@
 }
 .box-r{
   padding-left: 20rpx
+}
+.box-r text{
+  margin-left: 12rpx
 }
 .box-r .book-title{
   font-size: 32rpx;
@@ -46,3 +59,30 @@
   color: #666;
   float: right;
 }
+.bottom{
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100rpx;
+  text-align: center;
+  background-color: #fff;
+  padding-top: 20rpx
+}
+.load-last{
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50rpx;
+  text-align: center
+}
+.load-end{
+  height: 50rpx;
+  width: 50rpx;
+}
+.load-text{
+  font-size: 35rpx;
+  margin-left: 10rpx
+}
+ 

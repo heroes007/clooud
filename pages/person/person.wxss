@@ -1,0 +1,53 @@
+.message{
+  display: flex;
+  flex-direction: column;
+  background-color: skyblue;
+  height: 300rpx
+}
+.user{
+  display: flex;
+  flex-direction: row
+}
+.user-img{
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 75rpx
+}
+.person{
+  display: flex;
+  flex-direction: column;
+  margin: 30rpx 50rpx
+}
+.person-name{
+  font-size: 35rpx;
+  color: #fff
+}
+.person-content{
+  font-size: 24rpx;
+  color: #fff;
+  margin-top: 20rpx
+}
+.button{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0
+}
+.collect{
+  display: flex;
+  flex-direction: column;
+  margin: 30rpx 120rpx
+}
+.matter{
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center
+}
+.versions-img{
+  text-align: center;
+  height: 400rpx;
+  width: 400rpx
+}
+

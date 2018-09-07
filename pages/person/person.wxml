@@ -1,0 +1,25 @@
+<view class='container'> 
+  <image class='loading' src='/static/svg/loading.svg' wx:if="{{isLoading}}"></image>
+  <view class='message'>
+    <view class='user'>
+      <image class='user-img' src='../../static/iconfont/add.png'></image>
+      <view class='person'>
+        <text class='person-name'>名字</text>
+        <text class='person-content'>这家伙很帅</text>
+      </view>
+    </view>
+    <view class='button'>
+       <view class='collect'  bindtap='collect'>
+        <text class='matter'>{{collectNum}}</text>
+        <text class='matter'>收藏</text>
+      </view>
+      <view class='collect'>
+        <text class='matter'>4</text>
+        <text class='matter'>关注</text>
+      </view>
+    </view> 
+  </view>
+  <view class='versions'>
+    <image class='versions-img'></image>
+  </view>
+</view>
