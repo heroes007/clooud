@@ -1,4 +1,5 @@
 <view class='container'>
+<image src='/static/svg/refresh.svg' class='refresh' wx:if = "{{isRefresh}}"></image>
   <image class='loading' src='/static/svg/loading.svg' wx:if="{{isLoading}}"></image>
   <swiper indicator-dots="{{indicatorDots}}"
     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
@@ -24,7 +25,7 @@
           <view class='author'>
             <text class='author-l'>{{item.author}}</text>
             <view class='author-r'>
-              <text class='updata-time'>两天前</text>
+              <text class='updata-time'>{{item.times}}</text>
               <text class='category'>分类</text>
               <text class='many'>{{item.looknums}}人看</text>
             </view>

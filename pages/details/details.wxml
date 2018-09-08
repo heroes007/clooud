@@ -19,9 +19,9 @@
     <text class='middle-title'>简介</text>
     <text class='middle-introduce'>{{bookData.data.desc}}</text>
     <view class='middle-check'>
-      <text class='check-title'>查看目录</text>
+      <text class='check-title' bindtap='jumpCatalog'>查看目录</text>
       <text class='check-nums'>共{{bookData.length}}章</text>
-      <text class='check-time'>更新于2天前></text>
+      <text class='check-time'>更新于{{bookData.data.times}}></text>
     </view>
   </view>
   <button class='btn-read' bindtap='jumpCatalog'>阅读该书记</button>

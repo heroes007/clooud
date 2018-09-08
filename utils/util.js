@@ -1,3 +1,5 @@
+//封装fetch函数
+
 const baseUrl = 'https://m.yaojunrong.com'
 const fetch = {
   http(url,method,data){
@@ -31,6 +33,9 @@ const fetch = {
     return this.http(url, 'POST', data) 
   }
 }
+
+//登陆信息
+
 const login = ()=>{
   wx.login({
     success(res){
@@ -44,5 +49,30 @@ const login = ()=>{
     }
   })
 }
+
+//封装时间计算方法
+
+const count = (timestamp)=>{
+  let time = Math.floor((Date.parse(new Date()) - timestamp) / 1000)
+  var times = ""
+  if (time < 60) {
+    times = "刚刚"
+  } else if (time < 360) {
+    times = Math.floor(time / 60) + "分钟前"
+  } else if (time < 360 * 24) {
+    times = Math.floor(time / 360) + "小时前"
+  } else if (time < 360 * 24 * 30) {
+    times = Math.floor(time / 360 * 24) + "天前"
+  } else if (time < 360 * 24 * 30 * 12) {
+    times = Math.floor(time / 360 * 24 * 30) + "个月前"
+  } else if (time < 360 * 24 * 30 * 12 * 10) {
+    times = Math.floor(time / 360 * 24 * 30) + "年前"
+  } else {
+    times = "很久很久以前"
+  }
+}
+   
+
 exports.fetch = fetch
 exports.login = login
+exports.count = count

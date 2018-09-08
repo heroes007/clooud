@@ -11,8 +11,10 @@ Page({
     index:"",
     isLoading:false
   },
+
+  //初始化数据
+  
   onLoad: function (options) {
-    const _ts = this;
     this.setData({
       titleId:options.id,
       bookId:options.bookId,
@@ -21,6 +23,9 @@ Page({
     this.getData()
     this.getImp()
   },
+
+  //获取该书籍目录
+
   getData(){
     fetch.get(`/article/${this.data.titleId}`).then(res=>{
       this.setData({
@@ -31,6 +36,9 @@ Page({
       wx.setStorageSync()
     })
   },
+
+  //获取概书籍正文
+
   getImp(){
     fetch.get(`/titles/${this.data.bookId}`).then(res=>{
       this.setData({
@@ -38,18 +46,27 @@ Page({
       })
     })
   },
+
+  //目录按钮
+
   btnmenu(){
     let state = !this.data.isShow
     this.setData({
       isShow:state
     })
   },
+
+  //关闭目录按钮事件
+
   close(){
     this.setData({
       isShow:false
     })
   },
-  handmenu(event){
+
+  //点击目录进行跳转
+
+  handlemenu(event){
     const id = event.currentTarget.dataset.id
     this.setData({
       titleId:id
@@ -57,6 +74,9 @@ Page({
     this.getData()
     this.close()
   },
+
+  //加大字体
+
   handleadd(){
     let font = this.data.font
     if(font < 50){
@@ -70,6 +90,9 @@ Page({
         })
     }
   },
+
+  //缩小字体
+
   handledecrease() {
     let font = this.data.font    
     if (font > 25) {
@@ -83,6 +106,9 @@ Page({
       })
     }
   },
+
+  //向前翻页按钮
+
   handlelast(){
     let catalog = this.data.catalog
     if(this.data.index > 1){
@@ -98,6 +124,9 @@ Page({
       })
     }
   },
+
+  //向后翻页按钮
+
   handlenext() {
     let catalog = this.data.catalog
     if (this.data.index < catalog.length - 1) {
@@ -113,6 +142,7 @@ Page({
       })
     }
   },
+
   onShareAppMessage: function () {
   }
 })

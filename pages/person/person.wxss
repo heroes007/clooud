@@ -6,12 +6,14 @@
 }
 .user{
   display: flex;
-  flex-direction: row
+  flex-direction: row;
+  margin: 15rpx
 }
 .user-img{
   height: 150rpx;
   width: 150rpx;
-  border-radius: 75rpx
+  overflow: hidden;
+  border-radius: 50%;  
 }
 .person{
   display: flex;
@@ -45,9 +47,14 @@
   color: #fff;
   text-align: center
 }
-.versions-img{
+.versions{
+  width: 710prx;
+  height: 750rpx;
   text-align: center;
-  height: 400rpx;
-  width: 400rpx
+}
+.versions-img{
+  height: 60%;
+  width: 80%;
+  margin-top: 50rpx
 }
 

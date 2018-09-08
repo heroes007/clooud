@@ -5,6 +5,9 @@ Page({
     cataData: [],    
     isLoading:false,
   },
+
+  //初始化数据
+  
   onLoad: function (options) {
     this.setData({
       bookInof: options.id,
@@ -12,6 +15,9 @@ Page({
     })
     this.getData()
   },
+
+  //获取该书籍目录
+
   getData() {
     fetch.get(`/titles/${this.data.bookInof}`).then(res => {
       this.setData({
@@ -20,6 +26,7 @@ Page({
       })
     })
   },
+
   onShareAppMessage: function () {
 
   }

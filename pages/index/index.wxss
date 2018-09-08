@@ -1,3 +1,7 @@
+.container refresh{
+ width: 40rpx;
+ height: 30rpx  
+}
 .container .slide-image{
   width:710rpx;
   height:350rpx;
