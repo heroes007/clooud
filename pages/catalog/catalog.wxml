@@ -1,7 +1,7 @@
 <view class='container'>
   <image class='loading' src='/static/svg/loading.svg' wx:if="{{isLoading}}"></image>
   <view wx:for="{{cataData}}" wx:key="{{index}}" class='catalog'>
-    <navigator url="{{'/pages/book/book?id=' + item._id + '&bookId=' + bookInof}}" class='link'>
+    <navigator url="{{'/pages/book/book?id=' + item._id + '&title='+item.title+ '&bookId=' + bookInof}}" class='link'>
       {{item.title}}  
     </navigator>
   </view>

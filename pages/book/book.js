@@ -9,7 +9,8 @@ Page({
     essay:"",
     font:35,
     index:"",
-    isLoading:false
+    isLoading:false,
+    titleName:""
   },
 
   //初始化数据
@@ -18,22 +19,30 @@ Page({
     this.setData({
       titleId:options.id,
       bookId:options.bookId,
-      isLoading: true,      
+      isLoading: true, 
+      titleName:options.title
     })
     this.getData()
     this.getImp()
+    // this.change()
+
   },
 
   //获取该书籍目录
 
   getData(){
-    fetch.get(`/article/${this.data.titleId}`).then(res=>{
-      this.setData({
-        essay: res.data.article.content,
-        index : res.data.article.index,
-        isLoading:false,
+    return new Promise((resolve,reject)=>{
+      fetch.get(`/article/${this.data.titleId}`).then(res => {
+        this.setData({
+          essay: res.data.article.content,
+          index: res.data.article.index,
+          isLoading: false,
+        })
+        wx.setNavigationBarTitle({
+          title: res.data.title
+        })
       })
-      wx.setStorageSync()
+      resolve()
     })
   },
 
